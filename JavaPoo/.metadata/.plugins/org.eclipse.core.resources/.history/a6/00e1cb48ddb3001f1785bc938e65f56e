@@ -1,0 +1,31 @@
+package com.loiane.cursojava.aula20;
+
+public class ArrayMulti {
+
+	public static void main(String[] args) {
+		double[][] studentGrade = new double[3][4];
+		
+		studentGrade[0][0] = 7.5;
+		studentGrade[0][1] = 8.5;
+		studentGrade[0][2] = 9.5;
+		studentGrade[0][3] = 10;
+		
+		studentGrade[1][0] = 10;
+		studentGrade[1][1] = 9.5;
+		studentGrade[1][2] = 8.5;
+		studentGrade[1][3] = 7.5;
+		
+		studentGrade[2][0] = 7.5;
+		studentGrade[2][1] = 9.5;
+		studentGrade[2][2] = 10;
+		studentGrade[2][3] = 7.5;
+		
+		for(int i = 0; i < studentGrade.length; i++) {
+			for(int j = 0; j <= studentGrade[i].length; j++) {
+				System.out.print(studentGrade[i][j] + " ");
+			}
+		}
+
+	}
+
+}

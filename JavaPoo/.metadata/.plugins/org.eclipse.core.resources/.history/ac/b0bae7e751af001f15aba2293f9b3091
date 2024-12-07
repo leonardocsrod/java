@@ -1,0 +1,20 @@
+package pooIfce;
+
+public class NumeroPrimo {
+
+	public static void main(String[] args) {
+		for(int i = 0; i <= 100; i++) {
+			for(int j = 1, cont = 1; j <= i; j++) {
+				if(1 % j == 0) {
+					cont++;
+				}
+				if(cont == 2) {
+					System.out.println("O número " + j + " é primo.");
+				}
+			}
+			System.out.println(i);
+		}
+
+	}
+
+}

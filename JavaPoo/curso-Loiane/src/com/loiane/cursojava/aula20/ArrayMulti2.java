@@ -1,0 +1,51 @@
+package com.loiane.cursojava.aula20;
+
+public class ArrayMulti2 {
+
+	public static void main(String[] args) {
+		int[][][] a = new int[3][3][3];
+		
+		int i = 0;
+		int j= 0;
+		int k = 0;
+		//create multidimensional array
+		for(i = 0; i < a.length; i++) {
+			for(j = 0; j < a[i].length; j++) {
+				for(k = 0; k < a[i][j].length; k++) {					
+					a[i][j][k] = i + j + k;
+					System.out.print("a[" + i + "][" + j + "][" + k + "] = " + a[i][j][k] + "\n");
+				}
+				System.out.println("\n\n");
+			}
+			
+		}
+		
+		//sum of the terms
+		int sum = 0;
+		int sumPair = 0;
+		int sumOdd = 0;
+		for(i = 0; i < a.length; i++) {
+			for(j = 0; j < a[i].length; j++) {
+				for(k = 0; k < a[i][j].length; k++) {
+					sum += a[i][j][k];
+					if(a[i][j][k] % 2 ==0){
+						sumPair += a[i][j][k];
+					} else {
+						sumOdd += a[i][j][k];
+					}
+							
+				}
+			}
+			
+		}
+		
+		//printing results]
+		System.out.println("Total sum is " + sum);
+		System.out.println("Total pair sum is " + sumPair);
+		System.out.println("Total odd sum is " + sumOdd);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,44 @@
+package com.loiane.cursojava.aula19.labs;
+
+import java.util.Scanner;
+
+public class Ex28 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int[] a = new int[10];
+		int[] b = new int[a.length];
+		
+		for(int i = 0; i < a.length; i++) {
+			System.out.print("Enter the number in the position " + (i + 1) + ": ");
+			a[i] = scan.nextInt();
+		}
+		for(int i = 0; i < a.length; i++) {
+			b[i] = a[a.length - (i + 1)];
+		}
+				
+		for(int i = 0; i <= a.length - 1; i++) {
+			if(i == 0) {
+				System.out.print("\nVector a = {" + a[i] + ", ");
+			} else if(i == a.length - 1) {
+				System.out.print(a[i] + "}");
+			} else {
+				System.out.print(a[i] + ", ");
+			}
+		}
+		
+		for(int i = 0; i < b.length; i++) {
+			if(i == 0) {
+				System.out.print("\nVector b = {" + b[i] + ", ");
+			} else if(i == b.length - 1) {
+				System.out.print(b[i] + "}");
+			} else {
+				System.out.print(b[i] + ", ");
+			}
+		}
+		scan.close();
+
+	}
+
+}

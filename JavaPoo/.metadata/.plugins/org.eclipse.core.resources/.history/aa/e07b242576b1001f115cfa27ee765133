@@ -1,0 +1,30 @@
+package com.loiane.cursojava.aula19.labs;
+
+import java.util.Scanner;
+
+public class Ex25 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int[] a = new int[10];
+		
+		for(int i = 0; i <= a.length - 1; i++) {
+			System.out.print("Enter the number position " + (i + 1) + ": ");
+			a[i] = scan.nextInt();
+		}
+		
+		
+		for(int i = 0; i <= a.length - 1; i++) {
+			if(i == 0) {
+				System.out.print("Vector a = " + a[i] + " ");
+			} else if(i == a.length -1) {
+				System.out.println(a[i] + "}");
+			} else {
+				System.out.print(a[i]);
+			}
+		}
+		scan.close();
+
+	}
+
+}

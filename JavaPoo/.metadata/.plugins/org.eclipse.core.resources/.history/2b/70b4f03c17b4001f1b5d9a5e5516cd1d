@@ -1,0 +1,33 @@
+package com.loiane.cursojava.aula20;
+
+import java.util.Scanner;
+
+public class ArrayMulti3 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Intervieweds people: ");
+		int interviewedPeople = scan.nextInt();
+		
+		String[][] kidsName = new String[interviewedPeople][];
+		scan.close();
+		for(int i = 0; i < kidsName.length; i++) {
+			System.out.println("Quantity of kids: ");
+			int qttyKids = scan.nextInt();
+			kidsName[i] = new String[qttyKids];
+			for(int j = 0; j < kidsName[i].length; j++) {
+				kidsName[i][j] = scan.next(); 	
+			}
+		}
+		
+		//printing names
+		for(int i = 0; i < kidsName.length; i++) {
+			System.out.println("Person " + i + " has " + kidsName[i] + " kids.");
+			for(int j = 0; j < kidsName[i].length; j++) {
+				System.out.println("Name: " + kidsName[i][j]);
+			}
+		}
+
+	}
+
+}
