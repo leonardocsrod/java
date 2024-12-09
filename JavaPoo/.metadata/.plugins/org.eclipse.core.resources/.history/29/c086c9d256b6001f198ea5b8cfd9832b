@@ -1,0 +1,35 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Random;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		//methods
+		Random numberRandom = new Random();
+		//variable and arrays
+		int[][] a = new int[10][10];
+		
+		//create the array
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				a[i][j] = numberRandom.nextInt(10);
+			}
+		}
+		
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				if(i == 0 && j == 0) {
+					System.out.println("a: \n" + a[i][j] + " ");
+				} else if(j == a[i].length - 1) {
+					System.out.println(a[i][j]);
+				} else {
+					System.out.print(a[i][j] + " ");
+				}
+				
+			}
+		}
+
+	}
+
+}

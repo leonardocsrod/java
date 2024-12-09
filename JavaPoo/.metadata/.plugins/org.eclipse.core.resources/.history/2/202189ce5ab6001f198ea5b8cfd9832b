@@ -1,0 +1,76 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Random;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		//methods
+		Random numberRandom = new Random();
+		//variable and arrays
+		int[][] a = new int[10][10];
+		int bigger5 = 0;
+		int bigger5i = 0;
+		int bigger5j = 0;
+		int smaller5 = 0;
+		int smaller5i = 0;
+		int smaller5j = 0;
+		int bigger7 = 0;
+		int bigger7i = 0;
+		int bigger7j = 0;
+		int smaller7 = 0;
+		int smaller7i = 0;
+		int smaller7j = 0;
+		
+		//create the array
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				a[i][j] = numberRandom.nextInt(10);
+				if(i == 4 && j == 0) {
+					bigger5 = smaller5 = a[i][j];
+				} else if(a[4][j] > bigger5) {
+					bigger5 = a[i][j];
+					bigger5i = i;
+					bigger5j = j;
+				} else if(a[4][j] < smaller5) {
+					smaller5 = a[i][j];
+					smaller5i = i;
+					smaller5j = j;
+				}
+				if(i == 0 && j == 6) {
+					bigger7 = smaller7 = a[i][j];
+				} else if(a[i][6] > bigger7) {
+					bigger7 = a[i][6];
+					bigger7i = i;
+					bigger7j = j;
+				} else if(a[i][6] < smaller7) {
+					smaller7 = a[i][j];
+					smaller7i = i;
+					smaller7j = j;
+				}
+					
+			}
+		}
+		
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				if(i == 0 && j == 0) {
+					System.out.print("a: \n" + a[i][j] + " ");
+				} else if(j == a[i].length - 1) {
+					System.out.println(a[i][j]);
+				} else {
+					System.out.print(a[i][j] + " ");
+				}
+				
+			}
+		}
+		
+		//print results
+		System.out.println("\nThe smaller number in the row 5 is " + smaller5 +" in the position a[" + smaller5i + "][" + smaller5j + "].");
+		System.out.println("\nThe bigger number in the row 5 is " + bigger5 +" in the position a[" + bigger5i + "][" + bigger5j + "].");
+		System.out.println("\nThe smaller number in the column 7 is " + smaller7 +" in the position a[" + smaller7i + "][" + smaller7j + "].");
+		System.out.println("\nThe bigger number in the column 7 is " + bigger7 +" in the position a[" + bigger7i + "][" + bigger7j + "].");
+	
+	}
+
+}

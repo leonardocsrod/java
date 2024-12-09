@@ -1,0 +1,75 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Scanner;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// declaration array and variable
+		int[][] a = new int[3][3];
+		int[] aPair = new int[9];
+		int[] aOdd = new int[9];
+		int number = 0;
+		int posPair = 0;
+		int posOdd = 0;
+		int countPair = 0;
+		int countOdd = 0;
+		
+		//methods
+		Scanner scan = new Scanner(System.in);
+		
+		//initialization array
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				System.out.print("a[" + i + "][" + j + "]: ");
+				number = scan.nextInt();
+				a[i][j] = number;
+				if(number % 2 == 0) {
+					aPair[posPair] = a[i][j];
+					posPair++;
+					countPair++;
+				} else {
+					aOdd[posOdd] = a[i][j];
+					posOdd++;
+					countOdd++;
+				}
+				}
+		}
+		scan.close();
+		
+		//print array
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				if(i == 0 & j == 0) {
+					System.out.print("a: \n" + a[i][j] + " ");
+				} else if(j == a[i].length - 1) {
+					System.out.println(a[i][j]);
+				} else {
+					System.out.print(a[i][j] + " ");
+				}				
+			}
+		}
+		System.out.println("\n Quantity of pair numbers: " + countPair);
+		for(int i = 0; i < aPair[posPair]; i++) {
+			if(i == 0) {
+				System.out.print("Vector aPair = {" + aPair[i] + ", ");
+			} else if(i == aPair[posPair - 1]) {
+				System.out.println(aPair[i] + "}");
+			} else {
+				System.out.print(aPair[i] + ", ");
+			}
+		}
+		System.out.println("\n Quantity of odd numbers: " + countOdd);
+		for(int i = 0; i < aOdd[posOdd]; i++) {
+			if(i == 0) {
+				System.out.print("Vector aPair = {" + aOdd[i] + ", ");
+			} else if(i == aOdd[posOdd] - 1]) {
+				System.out.println(aOdd[i] + "}");
+			} else {
+				System.out.print(aOdd[i] + ", ");
+			}
+		}
+		
+	}
+
+}

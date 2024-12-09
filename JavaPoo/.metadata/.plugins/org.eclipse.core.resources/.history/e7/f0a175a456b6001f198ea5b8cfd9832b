@@ -1,0 +1,22 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Random;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		//methods
+		Random numberRandom = new Random();
+		//variable and arrays
+		int[][] a = new int[10][10];
+		
+		//create the array
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a.length[i]; j++) {
+				
+			}
+		}
+
+	}
+
+}
