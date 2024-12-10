@@ -1,0 +1,20 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Scanner;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		//declaration array and variable
+		String[][] month = new String[24][31];
+		
+		//method
+		Scanner scan = new Scanner(System.in);
+		System.out.println("CALENDAR");
+		System.out.println("1 - Marcar compromisso");
+		System.out.println("1 - Verificar compromisso");
+		scan.close();
+
+	}
+
+}

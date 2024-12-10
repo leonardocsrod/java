@@ -1,0 +1,42 @@
+package com.loiane.cursojava.aula20.labs;
+
+import java.util.Scanner;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		//declaration array and variable
+		String[][] month = new String[24][31];
+		int option = 0;
+		int i = 0;
+		int j = 0;
+		
+		//method
+		Scanner scan = new Scanner(System.in);
+		
+		//build menu
+		System.out.println("CALENDAR");
+		System.out.println("1 - Marcar compromisso");
+		System.out.println("2 - Verificar compromisso");
+		System.out.print("Option: ");
+		option = scan.nextInt();
+		if(option == 1) {
+			System.out.print("Day: ");
+			j = scan.nextInt();
+			System.out.print("Hour: ");
+			i = scan.nextInt();
+			System.out.print("Schedule: ");
+			month[i][j] = scan.next();
+		}
+		
+		scan.close();
+		
+		for(int k = 0; k < month.length; k++) {
+			for(int l = 0; l < month[k].length; l++) {
+				System.out.println(month[i][j] + " ");
+			}
+		}
+
+	}
+
+}
